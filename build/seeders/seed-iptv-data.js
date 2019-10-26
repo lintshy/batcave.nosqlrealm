@@ -36,16 +36,35 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-var mongodb_1 = require("mongodb");
-exports.getConnection = function (url) { return __awaiter(void 0, void 0, void 0, function () {
-    var client;
+var _ = require("lodash");
+var connector_1 = require("../store/connector");
+var parsedData_1 = require("../static/data/parsedData");
+var url = process.env.MONGO_URL;
+exports.seedIptv = function () { return __awaiter(void 0, void 0, void 0, function () {
+    var client, db, data, bulkOps, result;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4, mongodb_1.MongoClient.connect(url)];
+            case 0: return [4, connector_1.getConnection(url)];
             case 1:
                 client = _a.sent();
-                return [2, client];
+                db = client.db('batcave-db');
+                data = parsedData_1.iptvData.iptvIndia;
+                bulkOps = _.map(data, function (item) {
+                    return {
+                        insertOne: { document: item }
+                    };
+                });
+                return [4, db.collection('iptv').bulkWrite(bulkOps)];
+            case 2:
+                result = _a.sent();
+                client.close();
+                console.log(result);
+                return [2];
         }
     });
 }); };
-//# sourceMappingURL=connector.js.map
+exports.seedIptv().then(function (d) {
+})["catch"](function (e) {
+    console.log(e);
+});
+//# sourceMappingURL=seed-iptv-data.js.map

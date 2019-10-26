@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/lintshy/batcave.nosqlrealm#readme",
   "dependencies": {
+    "@types/lodash": "^4.14.144",
     "@types/mongodb": "^3.3.6",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.15",
     "mongodb": "^3.3.3",
     "typescript": "^3.6.4"
   }
