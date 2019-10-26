@@ -1,0 +1,24 @@
+{
+  "name": "batcave.nosqlrealm",
+  "version": "1.0.0",
+  "description": "op learning nosql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lintshy/batcave.nosqlrealm.git"
+  },
+  "author": "lintshy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lintshy/batcave.nosqlrealm/issues"
+  },
+  "homepage": "https://github.com/lintshy/batcave.nosqlrealm#readme",
+  "dependencies": {
+    "@types/mongodb": "^3.3.6",
+    "mongodb": "^3.3.3",
+    "typescript": "^3.6.4"
+  }
+}
