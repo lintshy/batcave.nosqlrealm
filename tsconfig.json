@@ -6,7 +6,8 @@
         "preserveConstEnums": true,
         "sourceMap": true,
         "types": ["node"],
-        "outDir": "build"
+        "outDir": "build",
+        "esModuleInterop": true
     },
     "include": [
         "src/**/*"
