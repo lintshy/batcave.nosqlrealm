@@ -1,0 +1,1 @@
+{"version":3,"file":"connector.js","sourceRoot":"","sources":["../../src/store/connector.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA,mCAAqC;AAExB,QAAA,aAAa,GAAG,UAAO,GAAW;;;;oBAE5B,WAAM,qBAAW,CAAC,OAAO,CAAC,GAAG,EAAE,EAAE,eAAe,EAAE,IAAI,EAAE,kBAAkB,EAAE,IAAI,EAAE,CAAC,EAAA;;gBAA5F,MAAM,GAAG,SAAmF;gBAClG,WAAO,MAAM,EAAA;;;KAChB,CAAA"}

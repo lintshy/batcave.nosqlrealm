@@ -1,7 +1,7 @@
 import express from 'express'
 import bodyParser from 'body-parser';
 
-import { graphqlSetup } from '../graphql/index'
+import { graphqlSetup } from '../graphql'
 
 require('dotenv').config()
 const app = express()

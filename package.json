@@ -8,7 +8,8 @@
     "seed-iptv": "node build/seeders/seed-iptv-data",
     "start": "node build/app/app",
     "build": "tsc",
-    "dev": "npm run build && npm run start"
+    "dev": "npm run build && npm run start",
+    "parseText": "node src/static/parseTextToJson"
   },
   "repository": {
     "type": "git",
@@ -33,9 +34,11 @@
     "graphql": "^14.5.8",
     "lodash": "^4.17.15",
     "mongodb": "^3.3.3",
+    "mongoose": "^5.7.7",
     "typescript": "^3.6.4"
   },
   "devDependencies": {
-    "@types/graphql": "^14.5.0"
+    "@types/graphql": "^14.5.0",
+    "@types/mongoose": "^5.5.23"
   }
 }

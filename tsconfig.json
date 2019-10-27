@@ -7,7 +7,9 @@
         "sourceMap": true,
         "types": ["node"],
         "outDir": "build",
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "strict": true,
+        "allowSyntheticDefaultImports": true
     },
     "include": [
         "src/**/*"

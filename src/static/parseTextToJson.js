@@ -14,14 +14,14 @@ const dataSets = _.map(items, item => {
             const furtherStrip = keyPair[1].split('\r\n')
             temp = {
                 ...temp,
-                [keyPair[0]]: furtherStrip[0],
+                [_.camelCase(keyPair[0])]: furtherStrip[0],
                 url: furtherStrip[1]
 
             }
         } else {
             temp = {
                 ...temp,
-                [keyPair[0]]: keyPair[1]
+                [_.camelCase(keyPair[0])]: keyPair[1]
             }
         }
 
