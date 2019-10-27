@@ -1,11 +1,11 @@
 import * as _ from 'lodash'
-require('dotenv').config()
-import { getConnection } from '../store/connector'
-import { iptvData } from '../static/data/parsedData'
-const url = process.env.MONGO_URL
+
+import { getMongoConnection } from '../store/connector'
+import { iptvData } from '../static/data/parsed-data'
+
 
 export const seedIptv = async () => {
-    const client = await getConnection(url)
+    const client = await getMongoConnection()
     const db = client.db('batcave-db')
     const data = iptvData.iptvIndia
     const bulkOps = _.map(data, item => {
