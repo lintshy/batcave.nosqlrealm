@@ -22,13 +22,20 @@
   "homepage": "https://github.com/lintshy/batcave.nosqlrealm#readme",
   "dependencies": {
     "@types/express": "^4.17.1",
+    "@types/express-graphql": "^0.9.0",
     "@types/lodash": "^4.14.144",
     "@types/mongodb": "^3.3.6",
+    "@types/node": "^12.11.7",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
     "fs": "0.0.1-security",
+    "graphql": "^14.5.8",
     "lodash": "^4.17.15",
     "mongodb": "^3.3.3",
     "typescript": "^3.6.4"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.5.0"
   }
 }
