@@ -1,1 +1,4 @@
 node_modules/
+.env
+build/static/data/
+src/static/data/

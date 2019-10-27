@@ -1,5 +1,5 @@
 import * as _ from 'lodash'
-
+require('dotenv').config()
 import { getConnection } from '../store/connector'
 import { iptvData } from '../static/data/parsedData'
 const url = process.env.MONGO_URL

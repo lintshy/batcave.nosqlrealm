@@ -37,6 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var _ = require("lodash");
+require('dotenv').config();
 var connector_1 = require("../store/connector");
 var parsedData_1 = require("../static/data/parsedData");
 var url = process.env.MONGO_URL;
