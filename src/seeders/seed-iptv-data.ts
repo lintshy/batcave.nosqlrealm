@@ -1,21 +1,24 @@
 import * as _ from 'lodash'
 
-import { getMongoConnection } from '../store/connector'
+import { getMongooseConnection } from '../store/db/connector'
 import { iptvData } from '../static/data/parsed-data'
+import { Channel } from '../store/models/channels'
 
 
 export const seedIptv = async () => {
-    const client = await getMongoConnection()
-    const db = client.db('batcave-db')
+    const client = await getMongooseConnection()
     const data = iptvData.iptvIndia
-    const bulkOps = _.map(data, item => {
+    const channels = _.filter(data, channel => channel !== null)
+    const bulkOps = _.map(channels, item => {
         return {
-            insertOne: { document: item }
+            insertOne: { document: item, upsert: true }
         }
     })
-    const result = await db.collection('iptv').bulkWrite(bulkOps)
+
+
+    const results = await Channel.collection.bulkWrite(bulkOps)
+    console.log(results)
     client.close()
-    console.log(result)
 
 }
 

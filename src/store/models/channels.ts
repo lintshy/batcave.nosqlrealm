@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
 const schema = mongoose.Schema
 
@@ -10,3 +10,5 @@ const channelSchema = new schema({
     url: String
 
 })
+
+export const Channel = mongoose.model('channels', channelSchema)
