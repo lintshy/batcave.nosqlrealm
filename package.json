@@ -9,7 +9,8 @@
     "start": "node build/app/app",
     "build": "tsc",
     "dev": "npm run build && npm run start",
-    "parseText": "node src/static/parseTextToJson"
+    "parseText": "node src/static/parseTextToJson",
+    "pm2start": "npm run build && pm2 start build/app/app.js"
   },
   "repository": {
     "type": "git",
