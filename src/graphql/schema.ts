@@ -9,11 +9,18 @@ export const schema = buildSchema(`
         groupTitle: String,
         url: String
     }
+    input channel{
+        tvgId: String,
+        tvgName: String,
+        tvgLogo: String,
+        groupTitle: String,
+        url: String
+    }
     type RootQuery{
         channels:[Channel]!
     }
     type RootMutation{
-        addChannel(name: String):String
+        addChannel(channel:channel):Channel
     }
     schema{
             query: RootQuery

@@ -1,14 +1,8 @@
 import mongoose from 'mongoose'
 
+import { ChannelMeta } from '../types/channel.types'
 const schema = mongoose.Schema
 
-const channelSchema = new schema({
-    tvgId: String,
-    tvgName: String,
-    tvgLogo: String,
-    groupTitle: String,
-    url: String
-
-})
+const channelSchema = new schema(ChannelMeta)
 
 export const Channel = mongoose.model('channels', channelSchema)
