@@ -15,5 +15,5 @@ getMongooseConnection().then(d => {
     app.listen(port, () => console.log(`iptv container up and running on ${port}!`))
 
 }).catch(e => {
-    console.log(`Unable to connect to batcave-db. App aborted...`)
+    console.log(`Unable to connect to batcave-db. App aborted...${e}`)
 })
