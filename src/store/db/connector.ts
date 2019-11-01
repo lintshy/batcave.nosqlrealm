@@ -1,10 +1,10 @@
 import { MongoClient } from 'mongodb'
 import mongoose from 'mongoose'
-require('dotenv').config()
+
 
 const options = { useNewUrlParser: true, useUnifiedTopology: true }
 const url = (process.env.MONGO_URL) ? process.env.MONGO_URL : ''
-
+console.log(`url-${url}`)
 
 export const getMongoConnection = async (): Promise<MongoClient> => {
 
