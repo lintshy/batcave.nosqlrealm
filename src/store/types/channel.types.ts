@@ -3,7 +3,9 @@ export const ChannelMeta = {
     tvgName: String,
     tvgLogo: String,
     groupTitle: String,
-    url: String
+    url: String,
+    genre: String,
+    region: String
 
 }
 
@@ -12,7 +14,9 @@ export type ChannelProps = {
     tvgName: String,
     tvgLogo: String,
     groupTitle: String,
-    url: String
+    url: String,
+    genre?: String,
+    region?: String
 }
 
 export type ChannelInput = {

@@ -7,14 +7,18 @@ export const schema = buildSchema(`
         tvgName: String,
         tvgLogo: String,
         groupTitle: String,
-        url: String
+        url: String,
+        region: String,
+        genre: String
     }
     input channel{
         tvgId: String,
         tvgName: String,
         tvgLogo: String,
         groupTitle: String,
-        url: String
+        url: String,
+        region: String,
+        genre: String
     }
     type RootQuery{
         channels:[Channel]!
