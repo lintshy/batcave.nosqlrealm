@@ -11,7 +11,7 @@
         "allowSyntheticDefaultImports": true
     },
     "include": [
-        "src/**/*"
+        "src/**/*", "config.js"
     ],
     "exclude": [
         "node_modules",

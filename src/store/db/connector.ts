@@ -1,10 +1,11 @@
 import { MongoClient } from 'mongodb'
 import mongoose from 'mongoose'
+const config = require('../../../config')
 
 
 const options = { useNewUrlParser: true, useUnifiedTopology: true }
-const url = (process.env.MONGO_URL) ? process.env.MONGO_URL : ''
-console.log(`url-${url}`)
+const url = config.mongoUrl
+
 
 export const getMongoConnection = async (): Promise<MongoClient> => {
 
