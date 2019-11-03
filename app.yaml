@@ -1,9 +1,0 @@
-
-# [START runtime]
-runtime: nodejs10
-# [END runtime]
-
-# [START env variable]
-env_variables:
-  MONGO_URL: "mongodb+srv://nightwing:ErfXxQqCJrjVU4uD@batcave-db-adk1i.gcp.mongodb.net/batcave-db?retryWrites=true&w=majority"
-# [END env variable]
