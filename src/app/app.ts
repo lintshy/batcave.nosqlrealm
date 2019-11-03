@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import { graphqlSetup } from '../graphql'
 import { getMongooseConnection } from '../store/db/connector'
 
+require('dotenv').config()
 
 const app = express()
 const port = process.env.PORT
